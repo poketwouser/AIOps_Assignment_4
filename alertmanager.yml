@@ -1,0 +1,20 @@
+# Based on DA3408/Monitoring/sample_alertmanager.yml.
+# The course sample posts to webhook.site; here the webhook is alert_receiver.py on the
+# same laptop, which writes every notification to results/logs/alerts.log.
+route:
+  group_by: ['alertname']
+  group_wait: 5s
+  group_interval: 5s
+  repeat_interval: 1m
+  receiver: 'local.webhook'
+
+receivers:
+  - name: 'local.webhook'
+    webhook_configs:
+      - url: 'http://127.0.0.1:5001/alert'
+        send_resolved: true
+
+inhibit_rules:
+  # while the app is down, don't also page about its latency/errors
+  - source_matchers: [alertname="CaptionAppDown"]
+    target_matchers: [component="caption_app"]

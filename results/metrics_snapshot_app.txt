@@ -1,0 +1,278 @@
+# scraped 2026-10-23 22:32:07 IST
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 0.0
+python_gc_objects_collected_total{generation="1"} 5893.0
+python_gc_objects_collected_total{generation="2"} 7142.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 0.0
+python_gc_collections_total{generation="1"} 41.0
+python_gc_collections_total{generation="2"} 3.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="14",patchlevel="4",version="3.14.4"} 1.0
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 5.307838464e+09
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 1.650184192e+09
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.7927747151e+09
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 561.3800000000001
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 23.0
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 524288.0
+# HELP caption_images_processed_total Images sent through the model
+# TYPE caption_images_processed_total counter
+caption_images_processed_total{browser="chrome",client_ip="127.0.0.1",mode="single",session_id="7e67d34c",status="ok"} 0.0
+caption_images_processed_total{browser="chrome",client_ip="127.0.0.1",mode="single",session_id="7e67d34c",status="error"} 0.0
+caption_images_processed_total{browser="chrome",client_ip="127.0.0.1",mode="bulk",session_id="7e67d34c",status="ok"} 100.0
+caption_images_processed_total{browser="chrome",client_ip="127.0.0.1",mode="bulk",session_id="7e67d34c",status="error"} 0.0
+# HELP caption_requests_total Caption requests (one single image or one ZIP = one request)
+# TYPE caption_requests_total counter
+caption_requests_total{browser="chrome",client_ip="127.0.0.1",mode="single",session_id="7e67d34c"} 0.0
+caption_requests_total{browser="chrome",client_ip="127.0.0.1",mode="bulk",session_id="7e67d34c"} 1.0
+# HELP caption_errors_total Images or uploads that failed, by exception type
+# TYPE caption_errors_total counter
+caption_errors_total{error_type="UnidentifiedImageError",mode="single"} 0.0
+caption_errors_total{error_type="OSError",mode="single"} 0.0
+caption_errors_total{error_type="BadZipFile",mode="single"} 0.0
+caption_errors_total{error_type="DecompressionBombError",mode="single"} 0.0
+caption_errors_total{error_type="ValueError",mode="single"} 0.0
+caption_errors_total{error_type="UnidentifiedImageError",mode="bulk"} 0.0
+caption_errors_total{error_type="OSError",mode="bulk"} 0.0
+caption_errors_total{error_type="BadZipFile",mode="bulk"} 0.0
+caption_errors_total{error_type="DecompressionBombError",mode="bulk"} 0.0
+caption_errors_total{error_type="ValueError",mode="bulk"} 0.0
+# HELP caption_zip_entries_skipped_total ZIP entries that were not captioned
+# TYPE caption_zip_entries_skipped_total counter
+caption_zip_entries_skipped_total{reason="macos_metadata"} 0.0
+caption_zip_entries_skipped_total{reason="hidden_file"} 0.0
+caption_zip_entries_skipped_total{reason="not_an_image"} 0.0
+caption_zip_entries_skipped_total{reason="too_large"} 0.0
+caption_zip_entries_skipped_total{reason="over_limit"} 0.0
+# HELP caption_bytes_received_total Bytes uploaded by users
+# TYPE caption_bytes_received_total counter
+caption_bytes_received_total{mode="single"} 0.0
+caption_bytes_received_total{mode="bulk"} 6.363878e+06
+# HELP caption_sessions_started_total New browser sessions opened
+# TYPE caption_sessions_started_total counter
+caption_sessions_started_total{browser="chrome",client_ip="127.0.0.1"} 1.0
+# HELP caption_unhandled_exceptions_total Exceptions that escaped a request handler (should stay 0)
+# TYPE caption_unhandled_exceptions_total counter
+caption_unhandled_exceptions_total 0.0
+# HELP caption_active_requests Requests being processed right now
+# TYPE caption_active_requests gauge
+caption_active_requests{mode="single"} 0.0
+caption_active_requests{mode="bulk"} 0.0
+# HELP caption_model_queue_length Images waiting for the model lock
+# TYPE caption_model_queue_length gauge
+caption_model_queue_length 0.0
+# HELP caption_bulk_images_remaining Images left in the bulk batches that are running
+# TYPE caption_bulk_images_remaining gauge
+caption_bulk_images_remaining 0.0
+# HELP caption_model_loaded 1 once the model is in memory
+# TYPE caption_model_loaded gauge
+caption_model_loaded 1.0
+# HELP caption_model_load_seconds How long the model took to load
+# TYPE caption_model_load_seconds gauge
+caption_model_load_seconds 0.16080714800045826
+# HELP caption_last_batch_size Number of images in the last finished ZIP
+# TYPE caption_last_batch_size gauge
+caption_last_batch_size 100.0
+# HELP caption_last_batch_duration_seconds Wall-clock time of the last finished ZIP
+# TYPE caption_last_batch_duration_seconds gauge
+caption_last_batch_duration_seconds 72.76554743699853
+# HELP caption_last_batch_images_per_second Images per second of the last finished ZIP
+# TYPE caption_last_batch_images_per_second gauge
+caption_last_batch_images_per_second 1.3742767493995898
+# HELP caption_active_sessions Browser sessions Streamlit currently has open
+# TYPE caption_active_sessions gauge
+caption_active_sessions 2.0
+# HELP caption_app_memory_rss_bytes Resident memory of the app process (model included)
+# TYPE caption_app_memory_rss_bytes gauge
+caption_app_memory_rss_bytes 1.65126144e+09
+# HELP caption_app_threads OS threads in the app process
+# TYPE caption_app_threads gauge
+caption_app_threads 31.0
+# HELP caption_inference_seconds model.generate() time per image
+# TYPE caption_inference_seconds histogram
+caption_inference_seconds_bucket{le="0.1",mode="single"} 0.0
+caption_inference_seconds_bucket{le="0.25",mode="single"} 0.0
+caption_inference_seconds_bucket{le="0.5",mode="single"} 0.0
+caption_inference_seconds_bucket{le="0.75",mode="single"} 0.0
+caption_inference_seconds_bucket{le="1.0",mode="single"} 0.0
+caption_inference_seconds_bucket{le="1.5",mode="single"} 0.0
+caption_inference_seconds_bucket{le="2.0",mode="single"} 0.0
+caption_inference_seconds_bucket{le="3.0",mode="single"} 0.0
+caption_inference_seconds_bucket{le="5.0",mode="single"} 0.0
+caption_inference_seconds_bucket{le="8.0",mode="single"} 0.0
+caption_inference_seconds_bucket{le="13.0",mode="single"} 0.0
+caption_inference_seconds_bucket{le="+Inf",mode="single"} 0.0
+caption_inference_seconds_count{mode="single"} 0.0
+caption_inference_seconds_sum{mode="single"} 0.0
+caption_inference_seconds_bucket{le="0.1",mode="bulk"} 0.0
+caption_inference_seconds_bucket{le="0.25",mode="bulk"} 0.0
+caption_inference_seconds_bucket{le="0.5",mode="bulk"} 2.0
+caption_inference_seconds_bucket{le="0.75",mode="bulk"} 67.0
+caption_inference_seconds_bucket{le="1.0",mode="bulk"} 99.0
+caption_inference_seconds_bucket{le="1.5",mode="bulk"} 100.0
+caption_inference_seconds_bucket{le="2.0",mode="bulk"} 100.0
+caption_inference_seconds_bucket{le="3.0",mode="bulk"} 100.0
+caption_inference_seconds_bucket{le="5.0",mode="bulk"} 100.0
+caption_inference_seconds_bucket{le="8.0",mode="bulk"} 100.0
+caption_inference_seconds_bucket{le="13.0",mode="bulk"} 100.0
+caption_inference_seconds_bucket{le="+Inf",mode="bulk"} 100.0
+caption_inference_seconds_count{mode="bulk"} 100.0
+caption_inference_seconds_sum{mode="bulk"} 71.67244849700728
+# HELP caption_preprocess_seconds Decode + resize + normalise time per image
+# TYPE caption_preprocess_seconds histogram
+caption_preprocess_seconds_bucket{le="0.005",mode="single"} 0.0
+caption_preprocess_seconds_bucket{le="0.01",mode="single"} 0.0
+caption_preprocess_seconds_bucket{le="0.025",mode="single"} 0.0
+caption_preprocess_seconds_bucket{le="0.05",mode="single"} 0.0
+caption_preprocess_seconds_bucket{le="0.1",mode="single"} 0.0
+caption_preprocess_seconds_bucket{le="0.25",mode="single"} 0.0
+caption_preprocess_seconds_bucket{le="0.5",mode="single"} 0.0
+caption_preprocess_seconds_bucket{le="1.0",mode="single"} 0.0
+caption_preprocess_seconds_bucket{le="+Inf",mode="single"} 0.0
+caption_preprocess_seconds_count{mode="single"} 0.0
+caption_preprocess_seconds_sum{mode="single"} 0.0
+caption_preprocess_seconds_bucket{le="0.005",mode="bulk"} 7.0
+caption_preprocess_seconds_bucket{le="0.01",mode="bulk"} 99.0
+caption_preprocess_seconds_bucket{le="0.025",mode="bulk"} 100.0
+caption_preprocess_seconds_bucket{le="0.05",mode="bulk"} 100.0
+caption_preprocess_seconds_bucket{le="0.1",mode="bulk"} 100.0
+caption_preprocess_seconds_bucket{le="0.25",mode="bulk"} 100.0
+caption_preprocess_seconds_bucket{le="0.5",mode="bulk"} 100.0
+caption_preprocess_seconds_bucket{le="1.0",mode="bulk"} 100.0
+caption_preprocess_seconds_bucket{le="+Inf",mode="bulk"} 100.0
+caption_preprocess_seconds_count{mode="bulk"} 100.0
+caption_preprocess_seconds_sum{mode="bulk"} 0.6354517549716547
+# HELP caption_queue_wait_seconds Time an image waited for the model lock
+# TYPE caption_queue_wait_seconds histogram
+caption_queue_wait_seconds_bucket{le="0.001",mode="single"} 0.0
+caption_queue_wait_seconds_bucket{le="0.01",mode="single"} 0.0
+caption_queue_wait_seconds_bucket{le="0.1",mode="single"} 0.0
+caption_queue_wait_seconds_bucket{le="0.5",mode="single"} 0.0
+caption_queue_wait_seconds_bucket{le="1.0",mode="single"} 0.0
+caption_queue_wait_seconds_bucket{le="2.0",mode="single"} 0.0
+caption_queue_wait_seconds_bucket{le="5.0",mode="single"} 0.0
+caption_queue_wait_seconds_bucket{le="10.0",mode="single"} 0.0
+caption_queue_wait_seconds_bucket{le="30.0",mode="single"} 0.0
+caption_queue_wait_seconds_bucket{le="+Inf",mode="single"} 0.0
+caption_queue_wait_seconds_count{mode="single"} 0.0
+caption_queue_wait_seconds_sum{mode="single"} 0.0
+caption_queue_wait_seconds_bucket{le="0.001",mode="bulk"} 100.0
+caption_queue_wait_seconds_bucket{le="0.01",mode="bulk"} 100.0
+caption_queue_wait_seconds_bucket{le="0.1",mode="bulk"} 100.0
+caption_queue_wait_seconds_bucket{le="0.5",mode="bulk"} 100.0
+caption_queue_wait_seconds_bucket{le="1.0",mode="bulk"} 100.0
+caption_queue_wait_seconds_bucket{le="2.0",mode="bulk"} 100.0
+caption_queue_wait_seconds_bucket{le="5.0",mode="bulk"} 100.0
+caption_queue_wait_seconds_bucket{le="10.0",mode="bulk"} 100.0
+caption_queue_wait_seconds_bucket{le="30.0",mode="bulk"} 100.0
+caption_queue_wait_seconds_bucket{le="+Inf",mode="bulk"} 100.0
+caption_queue_wait_seconds_count{mode="bulk"} 100.0
+caption_queue_wait_seconds_sum{mode="bulk"} 0.0006993200058786897
+# HELP caption_image_megapixels Resolution of uploaded images
+# TYPE caption_image_megapixels histogram
+caption_image_megapixels_bucket{le="0.05",mode="single"} 0.0
+caption_image_megapixels_bucket{le="0.1",mode="single"} 0.0
+caption_image_megapixels_bucket{le="0.25",mode="single"} 0.0
+caption_image_megapixels_bucket{le="0.5",mode="single"} 0.0
+caption_image_megapixels_bucket{le="1.0",mode="single"} 0.0
+caption_image_megapixels_bucket{le="2.0",mode="single"} 0.0
+caption_image_megapixels_bucket{le="4.0",mode="single"} 0.0
+caption_image_megapixels_bucket{le="8.0",mode="single"} 0.0
+caption_image_megapixels_bucket{le="16.0",mode="single"} 0.0
+caption_image_megapixels_bucket{le="+Inf",mode="single"} 0.0
+caption_image_megapixels_count{mode="single"} 0.0
+caption_image_megapixels_sum{mode="single"} 0.0
+caption_image_megapixels_bucket{le="0.05",mode="bulk"} 0.0
+caption_image_megapixels_bucket{le="0.1",mode="bulk"} 0.0
+caption_image_megapixels_bucket{le="0.25",mode="bulk"} 16.0
+caption_image_megapixels_bucket{le="0.5",mode="bulk"} 100.0
+caption_image_megapixels_bucket{le="1.0",mode="bulk"} 100.0
+caption_image_megapixels_bucket{le="2.0",mode="bulk"} 100.0
+caption_image_megapixels_bucket{le="4.0",mode="bulk"} 100.0
+caption_image_megapixels_bucket{le="8.0",mode="bulk"} 100.0
+caption_image_megapixels_bucket{le="16.0",mode="bulk"} 100.0
+caption_image_megapixels_bucket{le="+Inf",mode="bulk"} 100.0
+caption_image_megapixels_count{mode="bulk"} 100.0
+caption_image_megapixels_sum{mode="bulk"} 27.439422000000004
+# HELP caption_caption_words Words in the generated caption
+# TYPE caption_caption_words histogram
+caption_caption_words_bucket{le="2.0",mode="single"} 0.0
+caption_caption_words_bucket{le="4.0",mode="single"} 0.0
+caption_caption_words_bucket{le="6.0",mode="single"} 0.0
+caption_caption_words_bucket{le="8.0",mode="single"} 0.0
+caption_caption_words_bucket{le="10.0",mode="single"} 0.0
+caption_caption_words_bucket{le="12.0",mode="single"} 0.0
+caption_caption_words_bucket{le="15.0",mode="single"} 0.0
+caption_caption_words_bucket{le="20.0",mode="single"} 0.0
+caption_caption_words_bucket{le="+Inf",mode="single"} 0.0
+caption_caption_words_count{mode="single"} 0.0
+caption_caption_words_sum{mode="single"} 0.0
+caption_caption_words_bucket{le="2.0",mode="bulk"} 0.0
+caption_caption_words_bucket{le="4.0",mode="bulk"} 3.0
+caption_caption_words_bucket{le="6.0",mode="bulk"} 13.0
+caption_caption_words_bucket{le="8.0",mode="bulk"} 39.0
+caption_caption_words_bucket{le="10.0",mode="bulk"} 84.0
+caption_caption_words_bucket{le="12.0",mode="bulk"} 95.0
+caption_caption_words_bucket{le="15.0",mode="bulk"} 99.0
+caption_caption_words_bucket{le="20.0",mode="bulk"} 99.0
+caption_caption_words_bucket{le="+Inf",mode="bulk"} 100.0
+caption_caption_words_count{mode="bulk"} 100.0
+caption_caption_words_sum{mode="bulk"} 895.0
+# HELP caption_bulk_batch_seconds Wall-clock time of a whole ZIP
+# TYPE caption_bulk_batch_seconds histogram
+caption_bulk_batch_seconds_bucket{le="5.0"} 0.0
+caption_bulk_batch_seconds_bucket{le="10.0"} 0.0
+caption_bulk_batch_seconds_bucket{le="20.0"} 0.0
+caption_bulk_batch_seconds_bucket{le="30.0"} 0.0
+caption_bulk_batch_seconds_bucket{le="60.0"} 0.0
+caption_bulk_batch_seconds_bucket{le="90.0"} 1.0
+caption_bulk_batch_seconds_bucket{le="120.0"} 1.0
+caption_bulk_batch_seconds_bucket{le="180.0"} 1.0
+caption_bulk_batch_seconds_bucket{le="300.0"} 1.0
+caption_bulk_batch_seconds_bucket{le="600.0"} 1.0
+caption_bulk_batch_seconds_bucket{le="+Inf"} 1.0
+caption_bulk_batch_seconds_count 1.0
+caption_bulk_batch_seconds_sum 72.76554743699853
+# HELP caption_image_bytes Size of each image
+# TYPE caption_image_bytes summary
+caption_image_bytes_count{mode="single"} 0.0
+caption_image_bytes_sum{mode="single"} 0.0
+caption_image_bytes_count{mode="bulk"} 100.0
+caption_image_bytes_sum{mode="bulk"} 6.374938e+06
+# HELP caption_request_seconds End-to-end request time (upload read to last caption)
+# TYPE caption_request_seconds summary
+caption_request_seconds_count{mode="single"} 0.0
+caption_request_seconds_sum{mode="single"} 0.0
+caption_request_seconds_count{mode="bulk"} 1.0
+caption_request_seconds_sum{mode="bulk"} 72.76550231999863
+# HELP caption_zip_bytes Size of uploaded ZIP files
+# TYPE caption_zip_bytes summary
+caption_zip_bytes_count 1.0
+caption_zip_bytes_sum 6.363878e+06
+# HELP caption_zip_images Captionable images found per ZIP
+# TYPE caption_zip_images summary
+caption_zip_images_count 1.0
+caption_zip_images_sum 100.0
+# HELP caption_app_build_info Version and model of the captioning app
+# TYPE caption_app_build_info gauge
+caption_app_build_info{max_new_tokens="30",model="Salesforce/blip-image-captioning-base",torch_threads="8",version="1.0.0"} 1.0

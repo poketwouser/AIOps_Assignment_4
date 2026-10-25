@@ -1,0 +1,24 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Runtime state written by run_stack.sh (pid files, Prometheus TSDB, Alertmanager data)
+run/
+
+# Test inputs are rebuilt from COCO with make_test_zips.py
+test_data/
+
+# Noisy / duplicate logs
+results/logs/streamlit_first_run.log
+results/logs/alert_receiver.log
+
+# Course handout (not part of the submission)
+Assignment 4.pdf
+
+# Video is uploaded separately (too big for git)
+*.mp4
+*.webm
+
+# OS / editor
+.DS_Store

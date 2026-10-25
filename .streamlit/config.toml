@@ -1,0 +1,11 @@
+[server]
+port = 8501
+maxUploadSize = 500        # MB, so a big ZIP is not rejected
+headless = true
+# The watcher walks every lazily-imported transformers module and logs hundreds of
+# torchvision ImportErrors. It would also re-import metrics.py on save and register
+# the metrics twice. Restart the app by hand instead.
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false

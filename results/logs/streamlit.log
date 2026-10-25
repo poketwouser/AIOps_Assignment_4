@@ -1,0 +1,10 @@
+2026-10-23 22:50:12.871 Uvicorn server started on localhost:8501
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://localhost:8501
+
+2026-10-23 22:50:28,373 - caption_app - INFO - started the prometheus monitor at port 18000
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 34524.32it/s]
+2026-10-23 22:50:28,534 - caption_app - INFO - loaded Salesforce/blip-image-captioning-base in 0.2 s, torch threads = 8
+2026-10-23 22:50:45,913 - caption_app - INFO - run_single: received 218489 bytes from client 127.0.0.1 session ae2bfb48

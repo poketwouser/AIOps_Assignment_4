@@ -1,0 +1,36 @@
+# Prometheus config for Assignment 4.
+# Started from DA3408/Monitoring/sample_prometheus.yml (same 1 s scrape and Alertmanager on :9093).
+
+global:
+  scrape_interval: 1s       # same as the course sample; Grafana refreshes every 5 s on top of this
+  evaluation_interval: 1s   # how often rules.yml is evaluated
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: ["127.0.0.1:9093"]
+
+rule_files:
+  - "rules.yml"
+
+scrape_configs:
+  # The Streamlit app. metrics.py starts prometheus_client's HTTP server on :18000.
+  - job_name: "caption_app"
+    static_configs:
+      - targets: ["127.0.0.1:18000"]
+        labels:
+          app: "blip-captioner"
+          env: "laptop"
+
+  # node_exporter: host CPU / RAM / disk / network, to line up with the app metrics.
+  - job_name: "node"
+    static_configs:
+      - targets: ["127.0.0.1:9100"]
+        labels:
+          env: "laptop"
+
+  # Prometheus scraping itself.
+  - job_name: "prometheus"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["127.0.0.1:9090"]
